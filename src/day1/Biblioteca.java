@@ -21,12 +21,14 @@ public class Biblioteca {
      */
     void addGame(Joc j) {
 
-        jocuri[0] = j;
+
+
 
         for (int i = 0; i < jocuri.length; i++) {
             if (jocuri[i] == null) {
                 jocuri[i] = j;
                 break;
+
             }
         }
 
