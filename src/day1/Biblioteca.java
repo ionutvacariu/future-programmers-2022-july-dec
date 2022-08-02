@@ -40,6 +40,8 @@ public class Biblioteca {
     Sterge jocul din biblioteca dupa numele acestuia
 
     ce se intampla daca numele nu exista ?
+
+    Dupa fiecare remove reusit toate elementele de DUPA trebuie mutate la stanga, astfel incat sa NU ramana spatii “goale” in vector.
      */
     void remove(String numeJoc) {
 
