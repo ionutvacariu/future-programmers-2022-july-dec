@@ -1,7 +1,7 @@
 package day1;
 
 
-public class ASDASDASD {
+public class Main {
 
     public static void main(String[] args) {
 
@@ -31,6 +31,9 @@ public class ASDASDASD {
         functiei de remove, jocul care se scoate
         va fi citit de la tastatura
          */
+
+
+
 
 
     }

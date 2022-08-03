@@ -15,9 +15,15 @@ public class Joc {
         //....
     }
 
-    ;
+    public Joc() {
+    }
 
-    static void  modificaPTD(String nouTDJ, int pos) {
+    public Joc(double p){
+        pret = p;
+    }
+
+
+    static void modificaPTD(String nouTDJ, int pos) {
         posibilTipDeJoc[pos] = nouTDJ;
     }
 

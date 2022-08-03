@@ -4,18 +4,51 @@ import day1.Joc;
 
 public class Main {
     public static void main(String[] args) {
+
+        //Alexandra -- draw the STACK/HEAP
+        String a = " ASDASD";
+        String b = " ASDASD";
+        //atunci cand un string se construieste cu new --> se pune in heap-ul normal, nu in SP
+        String c = new String(" ASDASD");
+
         int i = 0;
-        int j = 3;
+        // variabila ++ --> intai foloseste valoarea, apoi incrementeaza
+        System.out.println(i++);
+        // ++ variabila --> intai incrementeaza valoarea, apoi foloseste
+        System.out.println(i++);
+        if (++i == 3 && ++i == 3) {
+            System.out.println("AICI" + i);
+        }
+        System.out.println(i);
 
-        int a = i;
-        i = j;
-        j = a;
+        increment(i);
+        System.out.println(i);
+        // 4
 
-        System.out.println(i); // aici trebuie sa aiba valoarea initiala a lui J
-        System.out.println(j);// aici trebuie sa aiba valoarea initiala a lui I
+        //____________________________
+        //apel constructor default
+        Joc j = new Joc();
+        // apel constr cu parametri
+        Joc j1 = new Joc(200);
 
-        Joc joc = new Joc();
+        Person p = new Person("va", "IO", "194833888333");
+//        p.setNume("ASDASDASD");
+        modificarePers(p);
+        System.out.println(p.getNume()); // ==> VA
+    }
+
+    static void modificarePers(Person nume) {
+        //this.nume --> nu poate fi facut, "this" nu exista, deoarece metoda este statica deci nu va fi apelata "pentru " o instanta care sa fie this
+        nume.setNume(nume.getNume().toUpperCase());
+
+    }
+
+    // modificator_de_acces static/non_static tip_returnat denumir (tip_param param, tip_param2 param2){ corp functie }
 
 
+    static void increment(int a) {
+        a = ++a;
+        System.out.println(a);
+        // 5
     }
 }
