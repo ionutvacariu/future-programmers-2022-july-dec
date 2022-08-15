@@ -3,6 +3,20 @@ package day1;
 public class Biblioteca {
 
     Joc[] jocuri = new Joc[20];
+    Film[] filme;
+    Carti[] carti;
+
+
+    Produs[] p = new Produs[20];
+
+    public Produs[] getP() {
+        return p;
+    }
+
+    public void setP(Produs[] p) {
+        this.p = p;
+    }
+
     String nume;
 
     /*
@@ -19,11 +33,7 @@ public class Biblioteca {
     daca vectorul actual a ajuns la capacitate maxima -- cream un nou vector
         de dimensiune dubla, si adaugam jocul j in noul vecotr.
      */
-    void addGame(Joc j) {
-
-
-
-
+    public void addGame(Joc j) {
         for (int i = 0; i < jocuri.length; i++) {
             if (jocuri[i] == null) {
                 jocuri[i] = j;
@@ -38,6 +48,16 @@ public class Biblioteca {
 
     }
 
+    public void add(Produs j) {
+        for (int i = 0; i < p.length; i++) {
+            if (p[i] == null) {
+                p[i] = j;
+                break;
+
+            }
+        }
+    }
+
     /*
     Sterge jocul din biblioteca dupa numele acestuia
 
@@ -45,9 +65,7 @@ public class Biblioteca {
 
     Dupa fiecare remove reusit toate elementele de DUPA trebuie mutate la stanga, astfel incat sa NU ramana spatii “goale” in vector.
      */
-    void remove(String numeJoc) {
+    public void remove(String numeJoc) {
 
     }
-
 }
-

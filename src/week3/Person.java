@@ -16,11 +16,11 @@ public class Person {
     }
 
     public String getNume() {
-        return nume;
+        return this.nume;
     }
 
     public void setNume(String nume) {
-        this.nume = nume;
+        this.prenume = nume;
     }
 
     public String getPrenume() {

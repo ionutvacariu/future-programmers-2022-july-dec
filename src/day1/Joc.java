@@ -1,12 +1,12 @@
 package day1;
 
-public class Joc {
-    private String numeJoc;
-    private double pret;
-    // Replace "String" with Date
-    private String date; //ex "2022/03/04"
+public class Joc extends Produs {
     private String tipDeJoc; // RGP, FPS, RTS, JOC_DE_FETE
     static String[] posibilTipDeJoc;
+
+    //singlePlayer/multiplayer
+    private boolean multiplayer;
+
 
     static {
 
@@ -18,7 +18,7 @@ public class Joc {
     public Joc() {
     }
 
-    public Joc(double p){
+    public Joc(double p) {
         pret = p;
     }
 
@@ -39,35 +39,19 @@ public class Joc {
         return tipDeJoc;
     }
 
-    public String getNumeJoc() {
-        return numeJoc;
-    }
-
-    public void setNumeJoc(String numeJoc) {
-        this.numeJoc = numeJoc;
-    }
-
-    public double getPret() {
-        return pret;
-    }
-
-    public void setPret(double pret) {
-        this.pret = pret;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
     public String[] getPosibilTipDeJoc() {
         return posibilTipDeJoc;
     }
 
     public void setPosibilTipDeJoc(String[] posibilTipDeJoc) {
         this.posibilTipDeJoc = posibilTipDeJoc;
+    }
+
+    public boolean isMultiplayer() {
+        return multiplayer;
+    }
+
+    public void setMultiplayer(boolean multiplayer) {
+        this.multiplayer = multiplayer;
     }
 }
