@@ -2,3 +2,62 @@ asdasd
 asdasdasdasda
 asdsdddddd
 sdadasdasda
+
+Film,titanic,2h, leonard.dicaprio.cnp;tipa_x ,2lei
+
+produs1
+produs2
+
+
+
+0 Film
+1 titanic
+2 2h
+3 [leonard;tipa_x]
+    leonard
+    tipa_x
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Introduceti comanda:
+1 - afisare produse
+2 - adaugare produs
+3 - remove produs
+4 - save
+5 - citire fisier
+_________________
+input: 1
+afisare --> printare lista produse in consola
+_________________
+input: 2
+output: Ce tip de produs adaugati?
+        1 - film
+        2 - joc
+        3 - carte
+        input: 1
+        output: introduceti nume
+        input : titanic
+        output: introduceti pret
+        ...............
+______________
+input: 2
+
+_______
+input: 4
+
+
+listare produse --> citire din fisier

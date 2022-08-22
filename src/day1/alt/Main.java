@@ -2,6 +2,7 @@ package day1.alt;
 
 
 import day1.*;
+import week3.Person;
 
 public class Main {
 
@@ -9,7 +10,7 @@ public class Main {
 
 
         // at the end, vom avea 2 librarii cu cate x jocuri in fiecare
-        Biblioteca b = new Biblioteca();
+        Biblioteca b = citireFisier();
         Joc j = new Joc();
         j.setNume("GiGeL");
         Film f = new Film();
@@ -30,5 +31,43 @@ public class Main {
                 ((Joc) p).isMultiplayer();
             }
         }
+
+
+        String opt = key.read();
+
+        if (opt.equals("citire_fisier")) {
+            Biblioteca citita = citireFisier();
+        }
+    }
+
+    private static Biblioteca citireFisier() {
+        Biblioteca b = new Biblioteca();
+        while (am linii de citit){
+            // afisare
+            Produs p = citireLinieFisier();
+
+            b.add(p);
+        }
+        return b;
+    }
+
+    private static Produs citireLinieFisier() {
+        String[] s = citireSiSplit();
+        if (s[0].equals("Film")) {
+            Film f = new Film();
+            f.setNume(s[1]);
+            f.setDurata(Double.valueOf(s[2]));
+
+            String[] actori = s[3].split(";");
+            for (String a : actori) {
+
+                String[] pers = a.split(".");
+                Person p = new Person(pers[0], pers[1], pers[2]);
+
+                f.getActori().add(p);
+            }
+            return f;
+        }
+        return null;
     }
 }
